@@ -50,5 +50,3 @@ If you also need it to skip guessing and use `--precise` (safer for serialized d
 ```bash
 sudo -u www-data wp search-replace 'https://old-domain.com' 'https://new-domain.com' --all-tables --precise --path=/var/www/dbname
 ```
-
-Note: no need for `sudo -u www-data -i` (that opens a login shell) — plain `sudo -u www-data wp ...` runs the single command as that user, which is what you want here. Just make sure `--path` points to the actual WP root.
