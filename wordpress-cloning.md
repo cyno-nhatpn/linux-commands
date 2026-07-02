@@ -39,6 +39,11 @@ GRANT ALL PRIVILEGES ON dbname.* TO 'dbname'@'localhost';
 FLUSH PRIVILEGES;
 ```
 
+### Symlink nginx
+```bash
+ln -s /etc/nginx/sites-available/site_name /etc/nginx/sites-enabled/site_name
+```
+
 ### wp search-replace as www-data
 
 ```bash
