@@ -39,6 +39,13 @@ GRANT ALL PRIVILEGES ON dbname.* TO 'dbname'@'localhost';
 FLUSH PRIVILEGES;
 ```
 
+### Resolve the HTTPS override problem in wp-config.php ( add-on after /* Add any custom values between this line and the "stop editing" line. */ )
+```php
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+    $_SERVER['HTTPS'] = 'on';
+}
+```
+
 ### Symlink nginx
 ```bash
 ln -s /etc/nginx/sites-available/site_name /etc/nginx/sites-enabled/site_name
