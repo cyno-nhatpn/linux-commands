@@ -44,6 +44,14 @@ FLUSH PRIVILEGES;
 ln -s /etc/nginx/sites-available/site_name /etc/nginx/sites-enabled/site_name
 ```
 
+### wp command check domain ( Execute from wp root dir)
+```bash
+sudo -u www-data wp option get siteurl
+```
+```bash
+sudo -u www-data wp option get home
+````
+
 ### wp search-replace as www-data
 
 ```bash
